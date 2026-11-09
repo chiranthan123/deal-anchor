@@ -15,4 +15,10 @@ dist/
 .idea/
 Thumbs.db
 .DS_Store
+*.mp4
+*.webm
+video_generator/*.mp3
+video_generator/raw_clips/
+video_generator/output/
+video_generator/unmixed_master.mp4
 

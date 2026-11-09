@@ -1,0 +1,6 @@
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\raw_clips\synced_s1.mp4'
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\raw_clips\synced_s2.mp4'
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\raw_clips\synced_s3.mp4'
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\raw_clips\synced_s4.mp4'
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\raw_clips\synced_s5.mp4'
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\raw_clips\synced_s6.mp4'

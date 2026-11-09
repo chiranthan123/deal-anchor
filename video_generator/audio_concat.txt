@@ -1,0 +1,5 @@
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\audio\part1_intro.mp3'
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\audio\part2_problem.mp3'
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\audio\part3_demo_proposal.mp3'
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\audio\part4_demo_tabs.mp3'
+file 'C:\Users\Admin\Desktop\macrosoft\DealAnchor-v1.0.0\video_generator\audio\part5_architecture_outro.mp3'
