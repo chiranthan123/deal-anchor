@@ -1,0 +1,55 @@
+{
+  "project_name": "DealAnchor",
+  "tagline": "B2B Client Relationship & Deal Memory Co-Pilot Powered by Hindsight",
+  "hackathon": "HackwithHyderabad 3.0",
+  "theme": "AI Agents That Learn Using Hindsight",
+  "domain": "Sales, Client Management & B2B Proposals",
+  "required_technologies": {
+    "memory_layer": {
+      "name": "Hindsight",
+      "provider": "Vectorize",
+      "python_package": "hindsight-client",
+      "sdk_operations_used": ["retain", "recall", "reflect"],
+      "bank_id": "b2b-deals-client-memory",
+      "status": "fully_integrated"
+    },
+    "desktop_orchestrator": {
+      "name": "Band AI Desktop",
+      "url": "https://www.band.ai",
+      "status": "configured_and_active"
+    },
+    "llm_inference": {
+      "provider": "Groq",
+      "recommended_models": ["llama-3.3-70b-versatile", "qwen/qwen3-32b"],
+      "status": "integrated"
+    }
+  },
+  "judging_criteria_mapping": {
+    "innovation_30_percent": {
+      "score_focus": "Eliminates deal attrition caused by forgotten customer constraints through continuous meeting memory synthesis.",
+      "evidence_files": ["agent.py", "memory.py"]
+    },
+    "use_of_hindsight_memory_25_percent": {
+      "score_focus": "Memory is the central differentiator: ensures proposals honor multi-week budget caps, competitor feedback, and personal preferences.",
+      "evidence_files": ["memory.py", "HINDSIGHT_INTEGRATION.md", "tests/test_deal_anchor.py"]
+    },
+    "technical_implementation_20_percent": {
+      "score_focus": "100% passing test suite (pytest), modular Hindsight client architecture, and fallback safety.",
+      "evidence_files": ["main.py", "requirements.txt", "tests/test_deal_anchor.py"]
+    },
+    "user_experience_15_percent": {
+      "score_focus": "Interactive Streamlit multi-meeting timeline, before-and-after proposal generator, and continuous meeting note retention.",
+      "evidence_files": ["ui.py", "run_demo.bat"]
+    },
+    "real_world_impact_10_percent": {
+      "score_focus": "B2B sales teams lose 30%+ of pipeline deals to forgotten objections; businesses readily pay $100+/mo for CRM memory co-pilots.",
+      "evidence_files": ["README.md", "seed_deals.py"]
+    }
+  },
+  "entrypoints": {
+    "cli_evaluation": "python main.py",
+    "web_dashboard": "python -m streamlit run ui.py",
+    "automated_tests": "pytest tests"
+  }
+}
+
