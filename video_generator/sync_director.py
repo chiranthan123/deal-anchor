@@ -158,28 +158,46 @@ async def record_modular_scenes():
             p3 = await ctx3.new_page()
             start_s3 = time.time()
             await p3.goto("http://localhost:8503")
-            await p3.wait_for_selector("button", timeout=15000)
+            
+            # Explicitly wait for main page and Generate button to mount
+            gen_btn = await p3.wait_for_selector("button:has-text('Generate Closing Proposal')", timeout=25000)
             await p3.evaluate(CURSOR_JS)
             await asyncio.sleep(1.0)
 
-            # Move virtual cursor to sidebar client details
-            await smooth_move(p3, 140, 220, 0.6)
-            await smooth_move(p3, 140, 360, 0.6)
+            # 1. Inspect sidebar client details (0s - 10s)
+            await smooth_move(p3, 140, 220, 0.8)
+            await asyncio.sleep(1.5)
+            await smooth_move(p3, 140, 360, 0.8)
+            await asyncio.sleep(2.0)
 
-            # Click Generate Closing Proposal Comparison
-            gen_btn = None
-            for b in await p3.query_selector_all("button"):
-                if "Generate Closing Proposal" in await b.inner_text():
-                    gen_btn = b
-                    break
-            if gen_btn:
-                await smooth_click(p3, gen_btn)
-                await asyncio.sleep(1.5)
+            # 2. Move directly to 'Generate Closing Proposal Comparison' and click it (10s - 18s)
+            print("Clicking 'Generate Closing Proposal Comparison'...")
+            await smooth_click(p3, gen_btn)
+            
+            # Wait for comparison columns to render
+            await p3.wait_for_selector(".generic-pitch", timeout=10000)
+            await asyncio.sleep(1.5)
 
-            # Smoothly scroll down through proposal comparison
-            for sy in range(80, 680, 40):
+            # 3. Hover over left Generic AI proposal (18s - 34s)
+            # Generic AI pitch ($32,000 failure)
+            print("Inspecting Generic AI pitch (left column)...")
+            await smooth_move(p3, 500, 480, 0.8)
+            await asyncio.sleep(2.0)
+            await smooth_move(p3, 520, 560, 0.8)
+            await asyncio.sleep(4.0)
+
+            # 4. Glide over to right Hindsight proposal (34s - 48s)
+            # Hindsight pitch ($15,000 success)
+            print("Inspecting DealAnchor Hindsight pitch (right column)...")
+            await smooth_move(p3, 1150, 480, 0.9)
+            await asyncio.sleep(2.0)
+            await smooth_move(p3, 1180, 560, 0.8)
+            await asyncio.sleep(4.0)
+
+            # 5. Smooth scroll down to reveal full side-by-side terms (48s - 55s)
+            for sy in range(60, 450, 40):
                 await p3.evaluate(f"window.scrollTo({{ top: {sy}, behavior: 'smooth' }});")
-                await smooth_move(p3, 480, 250 + (sy // 4), 0.1)
+                await smooth_move(p3, 850, 400 + (sy // 6), 0.12)
 
             # Hold to match exact audio duration
             elapsed_s3 = time.time() - start_s3
