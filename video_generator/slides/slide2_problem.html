@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Problem - Stateless AI</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1920px;
+      height: 1080px;
+      background: #0B0F19;
+      color: #F8FAFC;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 80px 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .header {
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid #EF4444;
+      color: #F87171;
+      border-radius: 50px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 56px;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      flex-grow: 1;
+      margin-top: 30px;
+    }
+    .card {
+      background: #111827;
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid #1F2937;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-fail {
+      border-top: 6px solid #EF4444;
+    }
+    .card-win {
+      border-top: 6px solid #10B981;
+    }
+    .card-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .fail-title { color: #F87171; }
+    .win-title { color: #34D399; }
+    .step-item {
+      background: #1F2937;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      font-size: 22px;
+      line-height: 1.4;
+      color: #CBD5E1;
+    }
+    .highlight-red { color: #FCA5A5; font-weight: bold; }
+    .highlight-green { color: #6EE7B7; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">The Real-World Dilemma</div>
+    <h1>Why Standard AI Destroys Multi-Week B2B Deals</h1>
+  </div>
+  <div class="grid">
+    <div class="card card-fail">
+      <div>
+        <div class="card-title fail-title">❌ Stateless AI (Goldfish Memory)</div>
+        <div class="step-item"><b>Call #1 (Oct 4):</b> Client Marcus says budget is capped at <b>$15,000/yr</b>.</div>
+        <div class="step-item"><b>Call #2 (Oct 18):</b> Client states field drivers hated Salesforce's 6-sec lag.</div>
+        <div class="step-item"><b>Call #3 (Today):</b> Generic AI quotes <span class="highlight-red">$32,000</span> and pushes complex dashboards!</div>
+      </div>
+      <div style="font-size: 24px; color: #EF4444; font-weight: 600;">
+        Result: Customer feels unheard. Deal is lost.
+      </div>
+    </div>
+    <div class="card card-win">
+      <div>
+        <div class="card-title win-title">✅ DealAnchor (With Hindsight Memory)</div>
+        <div class="step-item"><b>Memory Recall:</b> Retrieves Oct 4 budget ceiling ($15k) and Oct 18 mobile speed notes.</div>
+        <div class="step-item"><b>Contextual Pricing:</b> Locks price at <span class="highlight-green">$14,400 flat</span> (safely under budget).</div>
+        <div class="step-item"><b>Competitor Defense:</b> Highlights <span class="highlight-green">&lt;0.4s 1-tap mobile UX</span> specifically for drivers.</div>
+      </div>
+      <div style="font-size: 24px; color: #10B981; font-weight: 600;">
+        Result: Flawless alignment. Contract signed in seconds.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
